@@ -1,0 +1,1 @@
+[sbt-inspectr](https://github.com/eed3si9n/sbt-inspectr) is a plug-in for sbt that adds `inspectr` command for calling inspect recursively.

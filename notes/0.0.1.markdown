@@ -1,0 +1,27 @@
+## sbt-inspectr for sbt 0.11.1
+
+Add the following to your `~/.sbt/plugins/build.sbt`:
+
+    addSbtPlugin("com.eed3si9n" % "sbt-inspectr" % "0.0.1")
+
+This adds a single command `inspectr`:
+
+    helloworld> inspectr package
+    [info] compile:package = Task[java.io.File]
+    [info]   +-compile:package-bin = Task[java.io.File]
+    [info]     +-compile:package-configuration(for package-bin) = Task[sbt.Packag..
+    [info]     | +-compile:mappings(for package-bin) = Task[scala.collection.Seq[..
+    [info]     | | +-compile:products = Task[scala.collection.Seq[java.io.File]]
+    [info]     | | 
+    [info]     | +-compile:artifact-path(for package-bin) = target/scala-2.9.1/he..
+    [info]     | | +-*/*:artifact-name = <function3>
+    [info]     | | +-*:cross-target = target/scala-2.9.1
+    [info]     | | +-*/*:scala-version = 2.9.1
+    [info]     | | +-compile:artifact(for package-bin) = Artifact(helloworld,jar,..
+    [info]     | | | +-*/*:artifact-classifier = None
+    [info]     | | | +-compile:configuration = compile
+    [info]     | | | 
+    [info]     | | +-*:project-id = production:helloworld:0.1-SNAPSHOT
+    [info]     | | 
+    ....
+

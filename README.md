@@ -8,6 +8,12 @@ Add the following to your `~/.sbt/plugins/build.sbt`:
 
     addSbtPlugin("com.eed3si9n" % "sbt-inspectr" % "X.X.X")
 
+Then, for some reason with sbt 0.11.1, you have to do the following from sbt in your project:
+
+    > reload plugins
+    > clean
+    > reload return
+
 ## how to use
 The above automatically adds `inspectr` command.
 It displays the value of the key, and then displays all of its dependencies and their values in a tree.
