@@ -7,6 +7,9 @@ import sbt.Load.BuildStructure
 
 // see http://harrah.github.com/xsbt/latest/sxr/Project.scala.html
 object Inspectr {
+  // Use column width if we can find it
+  def maxColumns = jline.Terminal.getTerminal.getTerminalWidth - 8
+
   def apply(structure: BuildStructure, build: URI, scoped: ScopedKey[_],
       generation: Int)(implicit display: Show[ScopedKey[_]]): Inspectr = {
     val key = scoped.key
@@ -73,7 +76,7 @@ case class Inspectr(name: String,
       val s = ("  " * level) + 
               (if (level == 0) "" else "+-") + definedIn +
               " = " + valueString
-      if (s.length > 72) s.slice(0, 70) + ".."
+      if (s.length > Inspectr.maxColumns) s.slice(0, Inspectr.maxColumns - 2) + ".."
       else s
     }
     
