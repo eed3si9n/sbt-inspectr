@@ -1,0 +1,3 @@
+Uses jline to get the terminal width. {[paulp][1]}
+
+  [1]: https://github.com/paulp/sbt-inspectr/commit/b0d110f5c608e404bf29db17d70ce015ecadc9de

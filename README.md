@@ -1,12 +1,9 @@
 sbt-inspectr is an sbt plugin for calling inspect recursively.
 
-## latest
-0.0.1
-
 ## how to setup
 Add the following to your `~/.sbt/plugins/build.sbt`:
 
-    addSbtPlugin("com.eed3si9n" % "sbt-inspectr" % "0.0.1")
+    addSbtPlugin("com.eed3si9n" % "sbt-inspectr" % "0.0.2")
 
 Then, for some reason with sbt 0.11.1, you have to do the following from sbt in your project:
 

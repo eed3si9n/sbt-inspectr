@@ -4,7 +4,7 @@ name := "sbt-inspectr"
 
 organization := "com.eed3si9n"
 
-version := "0.0.2-SNAPSHOT"
+version := "0.0.2"
 
 scalacOptions := Seq("-deprecation", "-unchecked")
 
