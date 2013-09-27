@@ -1,5 +1,9 @@
 sbt-inspectr is an sbt plugin for calling inspect recursively.
 
+## note
+
+This plugin has been merged into sbt now as `insepct tree`.
+
 ## how to setup
 Add the following to your `~/.sbt/plugins/build.sbt`:
 
